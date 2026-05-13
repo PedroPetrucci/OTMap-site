@@ -10,8 +10,11 @@ html {
   background-color: black;
 }
 
-.home_background_img, .contato_background_img, .galeria_background_img, .sobre_background_img {
-  background-image: linear-gradient(rgba(0,0,0,0.60)), url('/img/header-background.jpeg');
+.home_background_img,
+.contato_background_img,
+.galeria_background_img,
+.sobre_background_img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.60)), url('/img/home_backgound.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,15 +24,23 @@ html {
 }
 
 .galeria_background_img {
-  background-image: linear-gradient(rgba(0,0,0,0.80)), url('/img/mapbackground.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.80)), url('/img/galeria_backgound.jpg');
+  font-family: 'Open Sans Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+  margin: 0;
 }
 
 .sobre_background_img {
-  background-image: linear-gradient(rgba(0,0,0,0.50)), url('/img/cityofgoldbackground.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.50)), url('/img/sobre_backgound.jpg');
 }
 
 .contato_background_img {
-  background-image: linear-gradient(rgba(0,0,0,0.50)), url('/img/wellcomebackground.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.50)), url('/img/contato_backgound.jpg');
+  /* background-color: rgb(255, 1, 1); */
 }
 
 .topbar {
@@ -60,8 +71,8 @@ html {
 }
 
 .logo {
-  width: 200px;
-  height: 120px;
+  width: 110px;
+  height: auto;
   margin: 20px;
   display: flex;
   justify-content: center;
@@ -74,7 +85,7 @@ html {
 }
 
 /*conteudos*/
-.conteudo{
+.conteudo {
   background-color: black;
   color: white;
   padding: 2em;
@@ -85,7 +96,7 @@ html {
   box-sizing: border-box;
 }
 
-.conteudo-contato{
+.conteudo-contato {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 2em;
@@ -97,20 +108,22 @@ html {
   justify-content: center;
 }
 
-.titulo {
+.titulo,
+h1 {
   color: white;
   padding: 2em;
   font-size: 64px;
   font-weight: bold;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 220px;
 }
 
 /*botão padão*/
 
-a{
+a {
   text-decoration: none;
 }
+
 .btn {
   line-height: 50px;
   height: 50px;
@@ -121,14 +134,15 @@ a{
 
 div[class*=box] {
   height: 33.33%;
-  width: 100%; 
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* botão 1 */
-.box-1 { background-color: none;
+.box-1 {
+  background-color: none;
   gap: 10em;
 }
 
@@ -139,9 +153,11 @@ div[class*=box] {
   text-decoration: none;
   font-size: 30px;
 }
+
 .btn-one span {
   transition: all 0.3s;
 }
+
 .btn-one::before {
   content: '';
   position: absolute;
@@ -156,17 +172,20 @@ div[class*=box] {
   border-bottom-width: 3px;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-top-color: rgba(255,255,255,0.5);
-  border-bottom-color: rgba(255,255,255,0.5);
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
   transform: scale(0.1, 1);
 }
+
 .btn-one:hover span {
   letter-spacing: 2px;
 }
+
 .btn-one:hover::before {
-  opacity: 1; 
-  transform: scale(1, 1); 
+  opacity: 1;
+  transform: scale(1, 1);
 }
+
 .btn-one::after {
   content: '';
   position: absolute;
@@ -177,8 +196,9 @@ div[class*=box] {
   z-index: 1;
   transition: all 0.3s;
 }
+
 .btn-one:hover::after {
-  opacity: 0; 
+  opacity: 0;
   transform: scale(0.1, 1);
 }
 
@@ -200,6 +220,7 @@ div[class*=box] {
   justify-content: center;
   align-items: center;
 }
+
 /*background rainbow*/
 .glow-on-hover:before {
   content: '';
@@ -256,3 +277,28 @@ div[class*=box] {
   }
 }
 
+.div_animation{
+  display: grid;
+  grid-template-columns: repeat(4, 10em);
+}
+
+/* .icone-container {
+  padding: 20px;
+} */
+
+.icone-animado {
+  width: 50px;
+  height: 50px;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: center;
+  color: white;
+}
+
+.icone-container:hover .icone-animado {
+  transform: rotate(360deg);
+}
