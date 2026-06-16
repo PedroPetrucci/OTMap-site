@@ -58,7 +58,6 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url
   box-sizing: border-box;
 }
 
-
 .navbar {
   margin: 0 auto;
   width: 100%;
@@ -726,4 +725,24 @@ ul li:nth-child(4) a:before {
     border-radius: 8px;
     display: block;
   }
+}
+
+/* animação scroll na topbar */
+.topbar {
+  transition: height 0.25s ease, padding 0.25s ease , background 0.25s ease;
+}
+
+.logo {
+  transition: width 0.25s ease, transform 0.25s ease;
+}
+
+.topbar--shrink {
+  height: 60px;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.logo--shrink {
+  width: 120px;
 }
